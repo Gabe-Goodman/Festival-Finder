@@ -5,12 +5,8 @@ import Map from "./Map";
 function Dashboard(props) {
 	const getLocation = () => {
 		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(
-				getCoordinates
-				// handleLocationError
-			);
+			navigator.geolocation.getCurrentPosition(getCoordinates);
 		}
-		// else alert("Geolocation is not supported by this browser.");
 	};
 
 	const getCoordinates = (position) => {
@@ -20,10 +16,6 @@ function Dashboard(props) {
 		});
 		console.log(props.userLocation);
 	};
-
-	// function onMarkerClick(marker) {
-	//   props.setSelectedLocation(marker);
-	// }
 
 	return (
 		<div>
@@ -38,7 +30,6 @@ function Dashboard(props) {
 				userLocation={props.userLocation}
 				selectedLocation={props.selectedLocation}
 				setSelectedLocation={props.setSelectedLocation}
-				// setCurrentView={setCurrentView}
 			/>
 			{props.selectedLocation ? (
 				<div className="dashboard__container">
@@ -48,7 +39,7 @@ function Dashboard(props) {
 						className="dashboard__btn"
 						onClick={(e) => {
 							e.preventDefault();
-							window.open(`${props.selectedLocation.link}`, "_blank");
+							window.location.href = `${props.selectedLocation.link}`;
 						}}
 					>
 						Take me there!

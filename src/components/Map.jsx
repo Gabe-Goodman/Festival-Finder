@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import { google, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
-import candleIcon from "../candle_icon.png";
+import candleIcon from "../candle-icon.png";
 import mapStyle from "./mapStyle.json";
 
 // icon images from freesvg.org
-const shop = new window.google.maps.MarkerImage(
+const candle = new window.google.maps.MarkerImage(
 	candleIcon,
 	null /* size is determined at runtime */,
 	null /* origin is 0,0 */,
 	null /* anchor is bottom center of the scaled image */,
-	new window.google.maps.Size(32, 32)
+	new window.google.maps.Size(17, 32)
 );
 
 // withGoogleMap takes a react component and returns one. We call these "Higher Order Components"
@@ -74,7 +74,7 @@ export default function Map(props) {
 			title: location.name,
 			type: location.type,
 			link: location.link,
-			icon: shop,
+			icon: candle,
 		};
 		markers.push(marker);
 	}
