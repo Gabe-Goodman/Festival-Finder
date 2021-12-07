@@ -1,0 +1,80 @@
+/* .dashboard {
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	background-color: #fbc602;
+	padding: 2.5vh;
+	height: 10vh;
+} */
+
+.venue__name {
+	font-weight: bold;
+}
+
+.dashboard__container {
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	background-color: #fbc602;
+	padding: 2.5vh;
+	height: 10vh;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.dashboard__header {
+	z-index: 2;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	background-color: #fbc602;
+	padding: 2.5vh;
+	height: 10vh;
+	width: 100vw;
+	position: absolute;
+}
+
+.dashboard__btn {
+	position: center;
+	padding: 10px;
+	font-size: 18px;
+	margin-top: 10px;
+	width: 40vh;
+	border: none;
+	color: white;
+	background-color: #12276f;
+	border-radius: 10px;
+}
+
+/* .favorites__btn {
+	padding: 10px;
+	font-size: 18px;
+	margin-top: 10px;
+	width: 40vh;
+	border: none;
+	color: white;
+	background-color: #1d2c4d;
+	border-radius: 10px;
+} */
+
+.dashboard div {
+	margin-top: 7px;
+}
+
+.map {
+	z-index: 1;
+}
