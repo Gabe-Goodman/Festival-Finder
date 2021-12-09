@@ -19,7 +19,7 @@
 	right: 0;
 }
 
-@media only screen and (orientation: landscape) {
+@media (orientation: landscape) {
 	.dashboard__container {
 		padding: 0vh;
 		height: 17vh;
