@@ -1,11 +1,28 @@
 import React, { useEffect, useRef } from "react";
 import { google, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import candleIcon from "../candle-icon.png";
+import candleShopIcon from "../candle-shop-icon.png";
 import mapStyle from "./mapStyle.json";
 
 // icon images from freesvg.org
 const candle = new window.google.maps.MarkerImage(
 	candleIcon,
+	null /* size is determined at runtime */,
+	null /* origin is 0,0 */,
+	null /* anchor is bottom center of the scaled image */,
+	new window.google.maps.Size(17, 32)
+);
+
+const candleActive = new window.google.maps.MarkerImage(
+	candleIcon,
+	null /* size is determined at runtime */,
+	null /* origin is 0,0 */,
+	null /* anchor is bottom center of the scaled image */,
+	new window.google.maps.Size(25.5, 48)
+);
+
+const candleShop = new window.google.maps.MarkerImage(
+	candleShopIcon,
 	null /* size is determined at runtime */,
 	null /* origin is 0,0 */,
 	null /* anchor is bottom center of the scaled image */,
@@ -25,11 +42,6 @@ const MyMap = withGoogleMap((props) => (
 		// onClick={props.onMapClick}
 	>
 		{props.markers.map((marker) => (
-			// <Marker
-			// 	title={"The marker`s title will appear as a tooltip."}
-			// 	name={"SOMA"}
-			// 	position={{ lat: 35.661608726745186, lng: 139.66727301061846 }}
-			// />
 			<Marker
 				key={marker.key}
 				{...marker}
@@ -68,14 +80,28 @@ export default function Map(props) {
 	}
 
 	for (const location of props.locations) {
-		const marker = {
-			key: location.key,
-			position: location.position,
-			title: location.name,
-			type: location.type,
-			link: location.link,
-			icon: candle,
-		};
+		let marker = {};
+		if (location.name === "Kiryuusha") {
+			marker = {
+				optimized: false,
+				zIndex: 99999999,
+				key: location.key,
+				position: location.position,
+				title: location.name,
+				type: location.type,
+				link: location.link,
+				icon: candleShop,
+			};
+		} else {
+			marker = {
+				key: location.key,
+				position: location.position,
+				title: location.name,
+				type: location.type,
+				link: location.link,
+				icon: candle,
+			};
+		}
 		markers.push(marker);
 	}
 

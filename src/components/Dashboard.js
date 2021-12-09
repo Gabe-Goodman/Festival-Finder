@@ -18,7 +18,7 @@ function Dashboard(props) {
 	};
 
 	return (
-		<div>
+		<div className="screen">
 			{/* <div className="dashboard__header">
 				<div>{"Click a candle"}</div>
 				<div>{"to learn more!"}</div>
@@ -33,8 +33,10 @@ function Dashboard(props) {
 			/>
 			{props.selectedLocation ? (
 				<div className="dashboard__container">
-					<div className="venue__name">{props.selectedLocation.title}</div>
-					<div>({props.selectedLocation.type})</div>
+					<div className="venue">
+						<div className="venue__name">{props.selectedLocation.title}</div>
+						<div className="venue__type">({props.selectedLocation.type})</div>
+					</div>
 					<button
 						className="dashboard__btn"
 						onClick={(e) => {
@@ -42,14 +44,15 @@ function Dashboard(props) {
 							window.location.href = `${props.selectedLocation.link}`;
 						}}
 					>
-						Take me there!
+						Google Maps
 					</button>
 				</div>
 			) : (
-				<div className="dashboard__container">
-					<div>{"Click a candle"}</div>
-					<div>{"to learn more!"}</div>
-				</div>
+				<p className="dashboard__container">
+					Click a candle
+					<br />
+					to learn more!
+				</p>
 			)}
 		</div>
 	);
