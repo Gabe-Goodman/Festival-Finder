@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { google, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import candleIcon from "../candle-icon.png";
 import candleShopIcon from "../candle-shop-icon.png";
-import { ShopContext } from "../providers/ShopProvider";
 import mapStyle from "./mapStyle.json";
 
 // icon images from freesvg.org
@@ -14,14 +13,6 @@ const candle = new window.google.maps.MarkerImage(
 	new window.google.maps.Size(17, 32)
 );
 
-const candleActive = new window.google.maps.MarkerImage(
-	candleIcon,
-	null /* size is determined at runtime */,
-	null /* origin is 0,0 */,
-	null /* anchor is bottom center of the scaled image */,
-	new window.google.maps.Size(25.5, 48)
-);
-
 const candleShop = new window.google.maps.MarkerImage(
 	candleShopIcon,
 	null /* size is determined at runtime */,
@@ -31,12 +22,17 @@ const candleShop = new window.google.maps.MarkerImage(
 );
 
 // withGoogleMap takes a react component and returns one. We call these "Higher Order Components"
-const MyMap = withGoogleMap((props, candleActive) => (
+const MyMap = withGoogleMap((props) => (
 	<GoogleMap
 		options={{
 			styles: mapStyle,
 			gestureHandling: "greedy",
-			disableDefaultUI: true,
+			zoomControl: false,
+			mapTypeControl: false,
+			scaleControl: false,
+			streetViewControl: false,
+			rotateControl: false,
+			fullscreenControl: false,
 		}}
 		ref={props.onMapLoad}
 		defaultZoom={16.35}
@@ -47,21 +43,15 @@ const MyMap = withGoogleMap((props, candleActive) => (
 			<Marker
 				key={marker.key}
 				{...marker}
-				onClick={() => {
-					console.log(props.value);
-					// setActiveShop(marker.title);
-					// console.log(marker);
-					// console.log("activeShop", activeShop);
-					// marker.icon = candleActive;
-					// props.setSelectedLocation({
-					// 	key: marker.key,
-					// 	position: marker.position,
-					// 	title: marker.title,
-					// 	type: marker.type,
-					// 	link: marker.link,
-					// });
-					// event.preventDefault();
-				}}
+				onClick={() =>
+					props.setSelectedLocation({
+						key: marker.key,
+						position: marker.position,
+						title: marker.title,
+						type: marker.type,
+						link: marker.link,
+					})
+				}
 			/>
 		))}
 	</GoogleMap>
@@ -114,20 +104,16 @@ export default function Map(props) {
 	}
 
 	return (
-		<ShopContext.Provider value={"hahaha"}>
-			<MyMap
-				className="map"
-				containerElement={<div style={{ height: `85vh` }} />}
-				mapElement={<div style={{ height: `85vh` }} />}
-				onMapLoad={() => {}}
-				onMapClick={() => {}}
-				markers={markers}
-				// onClick={() => {
-				// 	console.log("hello");
-				// }}
-				setSelectedLocation={props.setSelectedLocation}
-				// setCurrentView={props.setCurrentView}
-			/>
-		</ShopContext.Provider>
+		<MyMap
+			className="map"
+			containerElement={<div style={{ height: `85vh` }} />}
+			mapElement={<div style={{ height: `85vh` }} />}
+			onMapLoad={() => {}}
+			onMapClick={() => {}}
+			markers={markers}
+			onMarkerRightClick={() => {}}
+			setSelectedLocation={props.setSelectedLocation}
+			// setCurrentView={props.setCurrentView}
+		/>
 	);
 }
