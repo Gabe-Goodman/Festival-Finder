@@ -186,10 +186,10 @@
   },
   {
     "featureType": "road",
-    "elementType": "labels",
+    "elementType": "labels.icon",
     "stylers": [
       {
-        "visibility": "simplified"
+        "visibility": "off"
       }
     ]
   },
