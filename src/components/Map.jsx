@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { google, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import candleIcon from "../candle-icon.png";
 import candleShopIcon from "../candle-shop-icon.png";
+import { ShopContext } from "../providers/ShopProvider";
 import mapStyle from "./mapStyle.json";
 
 // icon images from freesvg.org
@@ -30,11 +31,12 @@ const candleShop = new window.google.maps.MarkerImage(
 );
 
 // withGoogleMap takes a react component and returns one. We call these "Higher Order Components"
-const MyMap = withGoogleMap((props) => (
+const MyMap = withGoogleMap((props, candleActive) => (
 	<GoogleMap
 		options={{
 			styles: mapStyle,
 			gestureHandling: "greedy",
+			disableDefaultUI: true,
 		}}
 		ref={props.onMapLoad}
 		defaultZoom={16.35}
@@ -45,15 +47,21 @@ const MyMap = withGoogleMap((props) => (
 			<Marker
 				key={marker.key}
 				{...marker}
-				onClick={() =>
-					props.setSelectedLocation({
-						key: marker.key,
-						position: marker.position,
-						title: marker.title,
-						type: marker.type,
-						link: marker.link,
-					})
-				}
+				onClick={() => {
+					console.log(props.value);
+					// setActiveShop(marker.title);
+					// console.log(marker);
+					// console.log("activeShop", activeShop);
+					// marker.icon = candleActive;
+					// props.setSelectedLocation({
+					// 	key: marker.key,
+					// 	position: marker.position,
+					// 	title: marker.title,
+					// 	type: marker.type,
+					// 	link: marker.link,
+					// });
+					// event.preventDefault();
+				}}
 			/>
 		))}
 	</GoogleMap>
@@ -106,16 +114,20 @@ export default function Map(props) {
 	}
 
 	return (
-		<MyMap
-			className="map"
-			containerElement={<div style={{ height: `85vh` }} />}
-			mapElement={<div style={{ height: `85vh` }} />}
-			onMapLoad={() => {}}
-			onMapClick={() => {}}
-			markers={markers}
-			onMarkerRightClick={() => {}}
-			setSelectedLocation={props.setSelectedLocation}
-			// setCurrentView={props.setCurrentView}
-		/>
+		<ShopContext.Provider value={"hahaha"}>
+			<MyMap
+				className="map"
+				containerElement={<div style={{ height: `85vh` }} />}
+				mapElement={<div style={{ height: `85vh` }} />}
+				onMapLoad={() => {}}
+				onMapClick={() => {}}
+				markers={markers}
+				// onClick={() => {
+				// 	console.log("hello");
+				// }}
+				setSelectedLocation={props.setSelectedLocation}
+				// setCurrentView={props.setCurrentView}
+			/>
+		</ShopContext.Provider>
 	);
 }

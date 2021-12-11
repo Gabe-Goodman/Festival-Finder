@@ -3,6 +3,8 @@ import "./Dashboard.css";
 import Map from "./Map";
 
 function Dashboard(props) {
+	const [activeShop, setActiveShop] = useState("haha");
+
 	const getLocation = () => {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(getCoordinates);
@@ -30,6 +32,8 @@ function Dashboard(props) {
 				userLocation={props.userLocation}
 				selectedLocation={props.selectedLocation}
 				setSelectedLocation={props.setSelectedLocation}
+				activeShop={activeShop}
+				setActiveShop={setActiveShop}
 			/>
 			{props.selectedLocation ? (
 				<div className="dashboard__container">
