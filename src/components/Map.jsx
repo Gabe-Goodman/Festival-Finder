@@ -35,8 +35,8 @@ const MyMap = withGoogleMap((props) => (
 			fullscreenControl: false,
 		}}
 		ref={props.onMapLoad}
-		defaultZoom={16.35}
-		defaultCenter={{ lat: 35.66125607391368, lng: 139.6682804608054 }}
+		defaultZoom={16}
+		defaultCenter={{ lat: 35.6607, lng: 139.6682804608054 }}
 		// onClick={props.onMapClick}
 	>
 		{props.markers.map((marker) => (
