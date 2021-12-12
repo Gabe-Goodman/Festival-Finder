@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import Map from "./Map";
+import logo from "../noel-logo.png";
 
 function Dashboard(props) {
 	const [activeShop, setActiveShop] = useState("haha");
@@ -21,10 +22,25 @@ function Dashboard(props) {
 
 	return (
 		<div className="screen">
-			{/* <div className="dashboard__header">
-				<div>{"Click a candle"}</div>
-				<div>{"to learn more!"}</div>
-			</div> */}
+			<div className="dashboard__header">
+				<img
+					className="logo"
+					src={logo}
+					onClick={() => window.open("https://komichinonoel.info/", "_blank")}
+				/>
+				<text className="header__button__label">
+					お気に入りの <br />
+					キャンドルに投票しよう
+				</text>
+				<button
+					className="header__button"
+					onClick={() =>
+						window.open("https://forms.gle/uEqzwB1fGVb8FgsS8", "_blank")
+					}
+				>
+					小径のノエル賞
+				</button>
+			</div>
 			<Map
 				id="map"
 				getLocation={getLocation}

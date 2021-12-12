@@ -20,6 +20,10 @@
 }
 
 @media only screen and (min-width: 321px) and (orientation: landscape) {
+	.dashboard__header {
+		visibility: hidden;
+	}
+
 	.dashboard__container {
 		padding: 0vh;
 		height: 17vh;
@@ -47,11 +51,35 @@
 	align-items: center;
 	justify-content: center;
 	margin: auto;
-	background-color: #fbc602;
-	padding: 2.5vh;
-	height: 10vh;
-	width: 100vw;
+	background: rgba(5, 13, 41, 0.6);
+	padding: 3vh;
+	height: 5vh;
+	width: 90%;
 	position: absolute;
+	/* border-bottom: 3px solid white; */
+}
+
+.logo {
+	left: 3vh;
+	top: 3vh;
+	position: absolute;
+	width: 20vh;
+}
+
+.header__button {
+	right: 3vh;
+	top: 7vh;
+	position: absolute;
+	width: 20vh;
+	color: #12276f;
+}
+
+.header__button__label {
+	right: 3vh;
+	top: 1vh;
+	position: absolute;
+	color: white;
+	font-size: 1rem;
 }
 
 .dashboard__btn {
