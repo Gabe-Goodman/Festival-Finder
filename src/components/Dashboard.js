@@ -28,18 +28,20 @@ function Dashboard(props) {
 					src={logo}
 					onClick={() => window.open("https://komichinonoel.info/", "_blank")}
 				/>
-				<text className="header__button__label">
-					お気に入りの <br />
-					キャンドルに投票しよう
-				</text>
-				<button
-					className="header__button"
-					onClick={() =>
-						window.open("https://forms.gle/uEqzwB1fGVb8FgsS8", "_blank")
-					}
-				>
-					小径のノエル賞
-				</button>
+				<div>
+					<text className="header__button__label">
+						お気に入りの <br />
+						キャンドルに投票しよう
+					</text>
+					<button
+						className="header__button"
+						onClick={() =>
+							window.open("https://forms.gle/uEqzwB1fGVb8FgsS8", "_blank")
+						}
+					>
+						小径のノエル賞
+					</button>
+				</div>
 			</div>
 			<Map
 				id="map"
