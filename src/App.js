@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Dashboard, Map } from "./components";
+import React, { useState } from "react";
+import { Dashboard } from "./components";
 import data from "./data.json";
 
 function App() {

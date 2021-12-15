@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { google, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import React, { useEffect } from "react";
+import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import candleIcon from "../candle-icon.png";
 import candleShopIcon from "../candle-shop-icon.png";
 import mapStyle from "./mapStyle.json";
@@ -61,7 +61,7 @@ const MyMap = withGoogleMap((props) => (
 export default function Map(props) {
 	useEffect(() => {
 		props.getLocation();
-	}, []);
+	}, [props]);
 
 	const markers = [];
 	if (props.userLocation) {
@@ -79,7 +79,7 @@ export default function Map(props) {
 
 	for (const location of props.locations) {
 		let marker = {};
-		if (location.name === "Kiryuusha") {
+		if (location.name === "気流舎 × なないろcandle") {
 			marker = {
 				optimized: false,
 				zIndex: 99999999,

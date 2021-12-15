@@ -31,23 +31,24 @@
 	background: rgba(5, 13, 41, 0.6);
 	padding: 3vh;
 	height: 7vh;
-	width: 90%;
+	min-width: 100vh;
+	min-width: -webkit-fill-available;
 	position: absolute;
 	/* border-bottom: 3px solid white; */
 }
 
 .logo {
 	left: 3vh;
-	top: 3vh;
+	top: 3.5vh;
 	position: absolute;
 	width: 20vh;
 }
 
 .header__button {
-	right: 3vh;
+	font-weight: bold;
+	right: 4.2vh;
 	top: 7vh;
 	position: absolute;
-	width: 20vh;
 	color: #12276f;
 	font-size: 1rem;
 }
@@ -93,9 +94,46 @@
 }
 
 @media only screen and (min-width: 321px) and (orientation: landscape) {
-	.dashboard__header {
-		visibility: hidden;
+	.logo {
+		left: 3vh;
+		top: 3vh;
+		position: absolute;
+		width: 30vh;
 	}
+
+	.dashboard__header {
+		z-index: 2;
+		font-size: 18px;
+		display: flex;
+		flex-direction: row;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		background: rgba(5, 13, 41, 0.6);
+		padding: 3vh;
+		height: 7vh;
+		position: absolute;
+	}
+
+	.header__button__label {
+		right: 50vh;
+		top: 1vh;
+		position: absolute;
+		color: white;
+		font-size: 1rem;
+	}
+
+	.header__button {
+		font-weight: bold;
+		right: 3vh;
+		top: 2vh;
+		position: absolute;
+		width: 40vh;
+		color: #12276f;
+		font-size: 1rem;
+	}
+
 	.dashboard__container {
 		display: flex;
 		flex-direction: row;
@@ -104,10 +142,10 @@
 	}
 	.dashboard__btn,
 	.dashboard__btn:active {
-		margin-bottom: 5vh;
+		margin-bottom: 3vh;
 		white-space: nowrap;
 	}
 	.venue {
-		margin-bottom: 3vh;
+		margin-bottom: 1vh;
 	}
 }
