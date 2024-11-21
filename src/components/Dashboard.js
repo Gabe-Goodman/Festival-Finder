@@ -14,7 +14,6 @@ function Dashboard(props) {
 			latitude: position.coords.latitude,
 			longitude: position.coords.longitude,
 		});
-		console.log(props.userLocation);
 	};
 
 	return (
