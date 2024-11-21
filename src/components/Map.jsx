@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import candleIcon from "../candle-icon.png";
-// import candleShopIcon from "../candle-shop-icon.png";
+import candleShopIcon from "../candle-shop-icon.png";
 import mapStyle from "./mapStyle.json";
 import noelCandle1 from "../noelCandle-1.png";
 import noelCandle2 from "../noelCandle-2.png";
@@ -37,13 +37,13 @@ const candle = new window.google.maps.MarkerImage(
 	new window.google.maps.Size(17, 32)
 );
 
-// const candleShop = new window.google.maps.MarkerImage(
-// 	noelCandle24,
-// 	null /* size is determined at runtime */,
-// 	null /* origin is 0,0 */,
-// 	null /* anchor is bottom center of the scaled image */,
-// 	new window.google.maps.Size(17, 32)
-// );
+const candleShop = new window.google.maps.MarkerImage(
+	noelCandle24,
+	null /* size is determined at runtime */,
+	null /* origin is 0,0 */,
+	null /* anchor is bottom center of the scaled image */,
+	new window.google.maps.Size(17, 32)
+);
 
 const candleIcons = {
 	noelCandle1: noelCandle1,
@@ -161,7 +161,7 @@ export default function Map(props) {
 				title: `${location.key}. ${location.name}`,
 				type: location.type,
 				link: location.link,
-				// icon: candleShop,
+				icon: candleShop,
 			};
 		} else {
 			marker = {
