@@ -12,7 +12,7 @@
 
   {
     "key": 2,
-    "name": "Flowers Loft × Peace Candle",
+    "name": "Flowers Loft × なないろcandle",
     "type": "バーラウンジも備えたライブハウス",
     "position": {
       "lat": 35.6621547076385, 
@@ -23,7 +23,7 @@
 
   {
     "key": 3,
-    "name": "下北沢 リンク・パーク",
+    "name": "下北沢 リンク・パーク × ABURABITO",
     "type": "フリースペース、青い箱が目印",
     "position": {
       "lat": 35.662588720450465, 
@@ -34,7 +34,7 @@
 
   {
     "key": 4,
-    "name": "Barnitas （バーニタス）× UNA LUCE",
+    "name": "Barnitas （バーニタス）× 和蝋燭　Yagi",
     "type": "特別で贅沢なカクテルバー",
     "position": {
       "lat": 35.663230959957374, 
@@ -56,7 +56,18 @@
 
   {
     "key": 6,
-    "name": "かまいキッチン × UNA LUCE",
+    "name": "Never Never Land × Fuji Candle",
+    "type": "老舗ミュージック&ダイニングバー",
+    "position": {
+      "lat": 35.663461424721135,
+      "lng": 139.669748977994
+    },
+    "link": "https://maps.app.goo.gl/wtnsKsbkc944898h9"
+  },
+
+  {
+    "key": 7,
+    "name": "かまいキッチン × MOON SOAP",
     "type": "子連歓迎の日本とフィリピンの料理",
     "position": {
       "lat": 35.66304389938577, 
@@ -66,8 +77,8 @@
   },
 
   {
-    "key": 7,
-    "name": "下北線路街 空き地",
+    "key": 8,
+    "name": "下北線路街 空き地 × AKARiYA",
     "type": "空き地カフェや空き地キッチンを備えた",
     "position": {
       "lat": 35.66299411652489, 
@@ -78,18 +89,7 @@
 
   {
     "key": 9,
-    "name": "Bar Ghetto -月灯- × Fuji Candle",
-    "type": "Look up to the beautiful moon!",
-    "position": {
-      "lat": 35.662666988076694, 
-      "lng": 139.67027249247678
-    },
-    "link": "https://goo.gl/maps/Upbf1rWtDWrWHTPW9"
-  },
-
-  {
-    "key": 10,
-    "name": "Cafe Stay Happy × AKARiYA",
+    "name": "Cafe Stay Happy × なないろcandle",
     "type": "オーガニック＆こたつカフェ",
     "position": {
       "lat": 35.66050694576107, 
@@ -99,85 +99,52 @@
   },
 
   {
+    "key": 10,
+    "name": "canna tokyo × AKARiYA",
+    "type": "CBD カフェ&バー",
+    "position": {
+      "lat": 35.66086107662044,
+      "lng": 139.66799269571024
+    },
+    "link": "https://maps.app.goo.gl/CYCU6pJv5T6gAzWs8"
+  },
+
+  {
     "key": 11,
-    "name": "CAFE KOYOI × P's Candle",
-    "type": "珈琲と自家製ケーキのカフェ",
-    "position": {
-      "lat": 35.658891521837084, 
-      "lng": 139.66820109571862
-    },
-    "link": "https://goo.gl/maps/vg89z2dVDeJ4RUqv6"
-  },
-
-  {
-    "key": 12,
-    "name": "RBL CAFE × glimmer candle",
-    "type": "クイズ作家が運営するブックカフェ",
-    "position": {
-      "lat": 35.658962888325476, 
-      "lng": 139.66808079370242
-    },
-    "link": "https://goo.gl/maps/WnhgMHV9ktrtcWTQ9"
-  },
-
-  {
-    "key": 13,
-    "name": "カレーの店・八月 × P's Candle",
+    "name": "カレーの店・八月 × Peace Candle",
     "type": "サラサラしたルーが自慢のカレー屋さん",
     "position": {
       "lat": 35.65941136429838, 
       "lng": 139.66760137037292
     },
-    "link": "https://g.page/8gatsu?share"
+    "link": "https://maps.app.goo.gl/eSd6KNSZYYmggfnb6"
   },
 
   {
-    "key": 15,
-    "name": "MOTHER × AKARiYA",
-    "type": "下北沢で一番古いロックバー",
+    "key": 12,
+    "name": "三叉灯 × Peace Candle",
+    "type": "雑貨とお洋服のセレクトショップ",
     "position": {
-      "lat": 35.65920472704748, 
-      "lng": 139.66729133782886
+      "lat": 35.65923615036584,
+      "lng": 139.6673941503094
     },
-    "link": "https://goo.gl/maps/RMXJRSMMxt2kSMSb9"
+    "link": "https://goo.gl/maps/tGJ8ky2P4uKU6buY6"
   },
 
   {
-    "key": 16,
-    "name": "茄子おやじ × Milky Candle",
-    "type": "カレーと音楽と珈琲のお店",
-    "position": {
-      "lat": 35.65927059078392, 
-      "lng": 139.66687277442753
-    },
-    "link": "https://goo.gl/maps/xhS9p73KmAnt3KzL9"
+      "key": 13,
+      "name": "MOTHER × AKARiYA",
+      "type": "下北沢で一番古いロックバー",
+      "position": {
+        "lat": 35.65920472704748, 
+        "lng": 139.66729133782886
+      },
+      "link": "https://goo.gl/maps/RMXJRSMMxt2kSMSb9"
   },
 
   {
-    "key": 17,
-    "name": "ダーウィンルーム × AKARiYA",
-    "type": "本と標本とカフェのショップ",
-    "position": {
-      "lat": 35.65874468544649, 
-      "lng": 139.66748466444253
-    },
-    "link": "https://goo.gl/maps/mJNNXS6PPtJNgpjh7"
-  },
-
-  {
-    "key": 18,
-    "name": "Rhythm9  × AKARiYA",
-    "type": "『神眼芸術』プロデュースのショップ",
-    "position": {
-      "lat": 35.658656747057336,
-      "lng": 139.66751804280557
-    },
-    "link": "https://goo.gl/maps/rDqvfHtNuW3jFLAk7"
-  },
-
-  {
-    "key": 19,
-    "name": "nikki × Nature and Candle",
+    "key": 14,
+    "name": "nikki × Lily's an",
     "type": "美容室",
     "position": {
       "lat": 35.65777228798224, 
@@ -187,8 +154,8 @@
   },
 
   {
-    "key": 20,
-    "name": "FILM × P's Candle",
+    "key": 15,
+    "name": "FILM × Lily's an",
     "type": "下北沢の一番端にある古着屋",
     "position": {
       "lat": 35.65779458696249, 
@@ -198,8 +165,8 @@
   },
 
   {
-    "key": 21,
-    "name": "COFFEA EXLIBRIS × なないろcandle",
+    "key": 16,
+    "name": "COFFEA EXLIBRIS × Bonheur candle",
     "type": "スペシャルティコーヒーとケーキのお店",
     "position": {
       "lat": 35.65751732882208, 
@@ -209,8 +176,8 @@
   },
 
   {
-    "key": 22,
-    "name": "ティッチャイ × Ninosathes",
+    "key": 17,
+    "name": "ティッチャイ × Lily Candle",
     "type": "ハッピータイ料理店",
     "position": {
       "lat": 35.65829070008843, 
@@ -220,19 +187,8 @@
   },
 
   {
-    "key": 23,
-    "name": "Mahina Pharmacy × empfangen candle",
-    "type": "ハーブと暮らしのお店",
-    "position": {
-      "lat": 35.65801692186404,
-      "lng": 139.66736412814464
-    },
-    "link": "https://goo.gl/maps/KbQ1emjhVE3g6afq9"
-  },
-
-  {
-    "key": 24,
-    "name": "気流舎 × なないろcandle",
+    "key": 18,
+    "name": "気流舎 × Ninosathes",
     "type": "古本屋＆ノエルキャンドルショップ!",
     "position": {
       "lat": 35.658031087468785,
@@ -240,24 +196,26 @@
     },
     "link": "https://goo.gl/maps/F5FH5PzuD7kfmJyX7"
   },
+
   {
-  "key": 8,
-  "name": "ハーフムーンOK × Fuji Candle",
-  "type": "本当に狭い、日替りマスターの店",
-  "position": {
-    "lat": 35.6625832891683, 
-    "lng": 139.67013408143282
+    "key": 19,
+    "name": "NANSEI PLUS × Fuji Candle ＆ AKARiYA",
+    "type": "駅前の新しいカタチを提案するエリア",
+    "position": {
+      "lat": 35.66058019558747,
+      "lng": 139.66594259927896
+    },
+    "link": "https://maps.app.goo.gl/xt1ypYfzFDVZv4HR8"
   },
-  "link": "https://goo.gl/maps/RMJX1xuT4ykLDVz67"
-  },
+
   {
-  "key": 14,
-  "name": "三叉灯 × P's Candle",
-  "type": "雑貨とお洋服のセレクトショップ",
-  "position": {
-    "lat": 35.65923615036584,
-    "lng": 139.6673941503094
+  "key": 20,
+  "name": "BONUS TRACK × Fuji Candle",
+  "type": "あたらしいまち",
+  "position": { 
+    "lat": 35.659177992834415,
+    "lng": 139.66385378337966
   },
-  "link": "https://goo.gl/maps/tGJ8ky2P4uKU6buY6"
+  "link": "https://maps.app.goo.gl/Z4pZzPBroDM1sDf98"
   }
 ]
