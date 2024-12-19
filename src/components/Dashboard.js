@@ -45,6 +45,7 @@ function Dashboard(props) {
 				userLocation={props.userLocation}
 				selectedLocation={props.selectedLocation}
 				setSelectedLocation={props.setSelectedLocation}
+				visitedLocations={props.visitedLocations}
 			/>
 			{props.selectedLocation ? (
 				<div className="dashboard__container">
@@ -56,6 +57,7 @@ function Dashboard(props) {
 						className="dashboard__btn"
 						onClick={(e) => {
 							e.preventDefault();
+							props.handleVisited(props.selectedLocation.key); // Mark as visited
 							window.location.href = `${props.selectedLocation.link}`;
 						}}
 					>
@@ -72,4 +74,5 @@ function Dashboard(props) {
 		</div>
 	);
 }
+
 export default Dashboard;
