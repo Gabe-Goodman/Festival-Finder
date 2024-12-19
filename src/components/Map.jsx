@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo } from "react";
-import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
+import React, { useEffect } from "react";
+import { GoogleMap, Marker } from "@react-google-maps/api";
 import candleIcon from "../candle-icon.png";
 import visitedCandleIcon from "../visited-candle-icon.png";
 import noelCandle1 from "../noelCandle-1.png";
