@@ -32,7 +32,10 @@ function Dashboard(props) {
 				<button
 					className="header__button"
 					onClick={() =>
-						window.open("https://forms.gle/uEqzwB1fGVb8FgsS8", "_blank")
+						window.open(
+							"https://docs.google.com/forms/d/e/1FAIpQLSdkiy3KlJHS-LEm-57AmmEYxNczJ9dxSJpqIp6ne4rnbDoF2w/viewform",
+							"_blank"
+						)
 					}
 				>
 					小径のノエル賞
